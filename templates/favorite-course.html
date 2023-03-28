@@ -4,11 +4,5 @@
 {% block page_head %}What is your favorite course?{% endblock %}
 {% block page_content %}
   <p>You entered your favorite course as:</p>
-    <form action="/templates/favorite-course.html" method="get">
-  <label for="subject">Subject:</label><br>
-  <input type="text" id="subject" name="subject"><br>
-  <label for="course_number">Course Number:</label><br>
-  <input type="number" id="course_number" name="course_number"><br><br>
-  <input type="submit" value="Submit">
-    </form>
+    <p>{{ request.args.get('subject') }} {{ request.args.get('course_number') }}</p>
 {% endblock %}
