@@ -17,7 +17,9 @@ def about():  # put application's code here
 
 @app.route('/favorite-course')
 def favorite_course():  # put application's code here
-    return print('You entered your favorite course as:' + request.args.get('subject') + request.args.get('course_number'))
+    print('You entered your favorite course as:' + request.args.get('subject') + request.args.get('course_number'))
+    return render_template('favorite-course.html')
+
 
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():  # put application's code here
